@@ -1,0 +1,336 @@
+<html !doctype>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        .btn {
+            box-shadow: 0 8px 4px -6px #2B8EAD;
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+            right: 30px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            background-color: #72c3dc;
+        }
+
+
+
+        .btnSort {
+
+            position: absolute;
+            top: 20%;
+
+        }
+
+        .btnShuffle {
+
+            position: absolute;
+            top: 10%;
+
+        }
+
+
+        .frame {
+            position: relative;
+            margin: 0px auto;
+            width: 960px;
+            min-width: 960px;
+            background-color: #EFEFEF;
+
+        }
+
+        .box1 {
+
+            line-height: 250px;
+            text-align: center;
+            vertical-align: middle;
+
+            text-align: center;
+            font-size: 100px;
+            background-color: #6F98A8;
+            width: 250px;
+            height: 250px;
+            color: white;
+            margin: 0px auto;
+        }
+
+
+        .box4 {
+            line-height: 250px;
+            text-align: center;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 100px;
+            background-color: #2B8EAD;
+            width: 250px;
+            height: 250px;
+            color: white;
+            margin: 0px auto;
+        }
+
+        .box5 {
+            line-height: 250px;
+
+
+            text-align: center;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 100px;
+            background-color: #2F454E;
+            width: 250px;
+            height: 250px;
+            color: white;
+            margin: 0px auto;
+        }
+
+        .box8 {
+            line-height: 250px;
+
+            text-align: center;
+            vertical-align: middle;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 100px;
+            background-color: #BFBFBF;
+            width: 250px;
+
+
+            height: 250px;
+            color: white;
+        }
+
+        .row {
+            margin-bottom: 100px;
+        }
+
+        #creator {
+            position: absolute;
+            top: 88%;
+            text-align: center;
+            left: 40%;
+            font-size: 20;
+        }
+
+        body {
+
+            min-width: 960px;
+
+            height: 100%;
+        }
+
+
+
+        @media (max-width:960px) {
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: block !important;
+			  position:relative;
+				margin:0;
+				padding:0;
+            }
+			
+			.title{
+			
+			 font-size:50px;
+			 line-height: 100px;
+			vertical-align:middle;
+			text-align:center;
+			color:white;
+			height:100px;
+			margin:0px auto ;
+		 width:100%;
+			background-color:#333333;
+			
+			}
+			
+			.mblbtnSort{
+			    right: 19%;
+			  position:absolute;
+		
+			}
+			
+			.mblbtnShuffle{
+			  position:absolute;
+			    left: 20%;
+			}
+			
+				
+	.mblbtn{
+	font-size: 30;
+	  position:absolute ;
+	
+	  box-shadow: 0 12px 4px -6px #2B8EAD;
+            margin: 35px 0px;
+               width: 280px;
+    height: 130px;
+            border-radius: 20px;
+          
+            color: white;
+            border: none;
+            cursor: pointer;
+            background-color: #72c3dc;
+	}
+	
+			.mobileDiv{
+			position:relative;
+				 font-size:50px;
+			 line-height: 100px;
+			height: 130px;
+			vertical-align:middle;
+			text-align:center;
+				background-color:#efefef;
+				width:80%;
+				margin: 10px auto;
+			}
+			
+			.insideDiv{
+			position:absolute;
+			left:0px;
+			height: 130px;
+			width:30px;
+			background-color:green;
+			}
+			.containerMobile{
+			    margin-top: 200px;}
+				
+				.box1Mobile{  background-color: #6F98A8;}
+				.box4Mobile{ background-color: #2B8EAD;}
+				.box5Mobile{ background-color: #2F454E;}
+				.box8Mobile{  background-color: #BFBFBF;}
+				
+				
+				
+        }
+    </style>
+
+    <script>
+
+
+        function shuffleMobile() {
+            var ul = document.querySelector('.containerMobile');
+            for (var i = ul.children.length; i >= 0; i--) {
+                ul.appendChild(ul.children[Math.random() * i | 0]);
+            }
+
+        }
+
+        function shuffle() {
+
+
+            var ul = document.querySelector('.container');
+            for (var i = ul.children.length; i >= 0; i--) {
+                ul.appendChild(ul.children[Math.random() * i | 0]);
+            }
+
+
+        }
+
+        function sortMobile() {
+            location.reload();
+
+        }
+
+        function sort() {
+            location.reload();
+
+        }
+    </script>
+</head>
+
+<body class=main_body>
+    <section class="desktop">
+        <p style="text-align:center">Shuffle and Sort</p>
+        <div class="frame">
+
+            <div class='container' style='display: flex'>
+
+
+                <div class='row'>
+                    <div id='box1'>
+                        <div class="box1"> 1</div>
+                    </div>
+                    <div id='box4'>
+                        <div class="box4"> 4</div>
+                    </div>
+                    <div id='box7'>
+                        <div class="box8"> 7</div>
+                    </div>
+                </div>
+
+
+                <div class='row'>
+                    <div id='box4'>
+                        <div class="box4"> 2</div>
+                    </div>
+                    <div id='box5'>
+                        <div class="box5"> 5</div>
+                    </div>
+                    <div id='box6'>
+                        <div class="box1"> 8</div>
+                    </div>
+                </div>
+
+
+                <div class='row'>
+                    <div id='box7'>
+                        <div class="box5"> 3</div>
+                    </div>
+                    <div id='box8'>
+                        <div class="box8"> 6</div>
+                    </div>
+                    <div id='box9'>
+                        <div class="box5"> 9</div>
+                    </div>
+                </div>
+                <p id="creator">Shuffle and sort by Hrinal Bunkar</p>
+
+            </div>
+
+
+
+
+            <button class="btnSort btn" onclick="sort()"> SORT</button>
+            <button class="btnShuffle btn" onclick="shuffle()"> SHUFFLE</button>
+        </div>
+
+
+    </section>
+
+    <section style="display:none" class="mobile">
+
+        <div class="title">
+            <h4> Shuffle and Sort </h4>
+        </div>
+
+        <button class="mblbtn mblbtnShuffle" onclick="shuffleMobile()"> SHUFFLE</button>
+            <button class="mblbtn mblbtnSort"  onclick="sortMobile()"> SORT</button>
+          
+
+      
+
+        <div class="containerMobile">
+            <div class="mobileDiv"><div class="insideDiv box1Mobile"></div>1</div>
+            <div class="mobileDiv "><div class="insideDiv box4Mobile"></div>2</div>
+            <div class="mobileDiv "><div class="insideDiv box5Mobile"></div>3</div>
+            <div class="mobileDiv "><div class="insideDiv box4Mobile"></div>4</div>
+            <div class="mobileDiv "><div class="insideDiv box5Mobile"></div>5</div>
+            <div class="mobileDiv "><div class="insideDiv box8Mobile"></div>6</div>
+            <div class="mobileDiv "><div class="insideDiv box8Mobile"></div>7</div>
+            <div class="mobileDiv "><div class="insideDiv box1Mobile"></div>8</div>
+            <div class="mobileDiv "><div class="insideDiv box5Mobile"></div>9</div>
+
+
+        </div>
+
+    </section>
+</body>
+
+</html>
